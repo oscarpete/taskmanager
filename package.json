@@ -1,0 +1,31 @@
+{
+  "name": "uptask",
+  "version": "1.0.0",
+  "description": "Task Manager project using Node and MVC",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscarpete/taskmanager.git"
+  },
+  "author": "Oscar Guti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oscarpete/taskmanager/issues"
+  },
+  "homepage": "https://github.com/oscarpete/taskmanager#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-validator": "^6.10.1",
+    "mariadb": "^2.5.3",
+    "mysql2": "^2.2.5",
+    "pug": "^3.0.2",
+    "sequelize": "^6.6.2",
+    "slug": "^4.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
