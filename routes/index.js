@@ -13,8 +13,11 @@ module.exports = function(){
     router.get('/newProject', projectController.projectForm);
     router.post('/newProject',
         body('name').not().isEmpty().trim().escape(),
-        projectController.newProject);
-   
+        projectController.newProject
+    );
+   //project listing
+    router.get('/projects/:url', projectController.projectByUrl);
+
     return router; //to make it available in index
 }
 

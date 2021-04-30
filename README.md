@@ -18,3 +18,5 @@ https://sequelize.org/master/manual/getting-started.html
 For the input protection you can use Express-Validator ```npm i --save express-validator```
 
 For the character chain useful for personalize links use ``` npm i --save slug```
+
+To make the links short ``` npm i --save shortid```

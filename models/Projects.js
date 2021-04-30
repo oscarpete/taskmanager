@@ -1,7 +1,9 @@
 const { Sequelize, DataTypes } = require('sequelize');
-const slug = require('slug')
-
 const db = require('../config/db');
+const slug = require('slug');
+const shortid = require('shortid');
+
+
 
 const Projects = db.define('projects', {
     id : {
@@ -17,7 +19,7 @@ const Projects = db.define('projects', {
         beforeCreate(project) {
             const url = slug(project.name).toLowerCase();
 
-            project.url = url;
+            project.url = `${url}-${shortid.generate()}`;
         }
     }
 });
