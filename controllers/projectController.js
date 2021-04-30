@@ -66,3 +66,23 @@ exports.projectByUrl = async (req, res, next) => {
     });
 }
 
+exports.editForm = async (req, res) => {
+
+    const projectsPromise = Projects.findAll();
+
+    const projectPromise = Projects.findOne({
+        where: {
+            id: req.params.id
+        }
+    });
+
+    const [projects, project] = await Promise.all([projectsPromise, projectPromise]);
+
+    //this will render the VIEW
+    res.render('newProject', {
+        pageName : 'Edit Project',
+        projects,
+        project
+    })
+}
+

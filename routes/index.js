@@ -18,6 +18,9 @@ module.exports = function(){
    //project listing
     router.get('/projects/:url', projectController.projectByUrl);
 
+    //to UPDATE the project
+    router.get('/project/edit/:id', projectController.editForm);
+
     return router; //to make it available in index
 }
 
